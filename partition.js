@@ -14,6 +14,7 @@ while(it != null){
         rightLinkedList = rightLinkedList.next;
     }
     it = it.next;
+    
 }
 rightLinkedList.next = null;//last node of right part will be last node of list
 leftLinkedList.next = temp.next;//connect two lists
