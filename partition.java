@@ -1,12 +1,6 @@
 /**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
+Input: head = [1,4,3,2,5,2], x = 3
+Output: [1,2,2,4,3,5]
  */
 class Solution {
     public ListNode partition(ListNode head, int x) {
