@@ -1,4 +1,7 @@
- */
+/*
+Input: mat = [[0,0,0],[0,1,0],[0,0,0]]
+Output: [[0,0,0],[0,1,0],[0,0,0]]
+*/
 var updateMatrix = function(matrix) {
     
     // General approach is: Loop over the full matrix to find all zeroes first.
