@@ -1,5 +1,14 @@
 // Sort Items by Groups Respecting Dependencies
+/*
+Input: n = 8, m = 2, group = [-1,-1,1,0,0,1,0,-1], beforeItems = [[],[6],[5],[6],[3,6],[],[],[]]
+Output: [6,3,4,1,5,2,0,7]
 
+ex:2
+Input: n = 8, m = 2, group = [-1,-1,1,0,0,1,0,-1], beforeItems = [[],[6],[5],[6],[3],[],[4],[]]
+Output: []
+Explanation: This is the same as example 1 except that 4 needs to be before 6 in the sorted list.
+
+*/
 class Solution {
     public int[] sortItems(int n, int m, int[] group, List<List<Integer>> beforeItems) {
         // If an item belongs to zero group, assign it a unique group id.
