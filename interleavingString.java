@@ -1,9 +1,11 @@
-BFS solution (6ms)
-Imagine a grid, which x-axis and y-axis are s1 and s2, matching s3 is the same as
-finding a path from (0,0) to (len1, len2). It actually becomes a
-BFS on grid. Since we don't need exact paths, a HashSet of
-coordinates is used to eliminate duplicated paths.
-
+/*
+Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbcbcac"
+Output: true
+Explanation: One way to obtain s3 is:
+Split s1 into s1 = "aa" + "bc" + "c", and s2 into s2 = "dbbc" + "a".
+Interleaving the two splits, we get "aa" + "dbbc" + "bc" + "a" + "c" = "aadbbcbcac".
+Since s3 can be obtained by interleaving s1 and s2, we return true.
+*/
 public class Solution {
     public boolean isInterleave(String s1, String s2, String s3) {
         int len1 = s1.length(),
@@ -40,13 +42,9 @@ public class Solution {
         return queue.size() > 0 && matched == len3;
     }
 }
-DFS solution with memorization (2ms)
-This looks slow but is actually faster than BFS! Think about it carefully, in this
-particular problem, search always ends at the same depth. DFS with memorization
-searches about the same amount of paths with the same length as BFS, if it is doesn't
-terminate on the first path found. Without the queue operations, the overall cost
-is only smaller if we don't count call stack. The most significant runtime reducer is
-probably the early termination
+////////////////////////////////////////////////////////////
+//DFS solution with memorization (2ms)
+
 
 public class Solution {
     public boolean isInterleave(String s1, String s2, String s3) {
