@@ -74,3 +74,23 @@ class Solution {
     }
 }
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ public int bestClosingTime(String customers) {
+        int result = 0;
+        int balance = 0;
+        
+        for (int i = 0; i < customers.length(); ++i) {
+            if (customers.charAt(i) == 'N') {
+                balance++;
+            } else {
+                balance--;
+                if (balance < 0) {
+                    result = i + 1;
+                    balance = 0;
+                }
+            }
+        }
+
+        return result; 
+    }
