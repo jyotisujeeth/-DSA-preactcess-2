@@ -93,6 +93,8 @@ const bestClosingTime = (customers) => {
   return optimalTime;
 };
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // Test cases
 console.log(bestClosingTime("YYNY")); // Output: 2
 console.log(bestClosingTime("NNNNN")); // Output: 0
