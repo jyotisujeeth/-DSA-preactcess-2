@@ -8,6 +8,7 @@ There are 2 steps to sort the array in non-decreasing order. Therefore, we retur
 
 */class Solution {
     public long minimumReplacement(int[] nums) {
+        
         long answer = 0;
         int n = nums.length;
 
