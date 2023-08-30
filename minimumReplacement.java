@@ -31,3 +31,16 @@ There are 2 steps to sort the array in non-decreasing order. Therefore, we retur
         return answer;
     }
 }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public long minimumReplacement(int[] nums) {
+        long ans = 0L;
+        int m = nums[nums.length - 1];
+        for (int i = nums.length - 2; i >= 0; i--) {
+            int k = (nums[i] - 1) / m;
+            ans += k;
+            m = nums[i] / (k + 1);
+        }
+        
+        return ans;
+    }
